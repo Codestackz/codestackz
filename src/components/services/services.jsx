@@ -32,10 +32,10 @@ const Services = () => {
     return (
         <>
             {/* id='ourservices' */}
-            <div className="text-center p-4" style={{ backgroundColor: "whitesmoke", height: "fit-content" }} data-aos="zoom-out">
+            <div className="text-center p-4" style={{ backgroundColor: "aliceblue", height: "fit-content" }} data-aos="zoom-out">
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
             </div>
-            <div className="row  px-4 pb-4" style={{ backgroundColor: "whitesmoke" }} >
+            <div className="row  px-4 pb-4" style={{ backgroundColor: "aliceblue" }} >
                 <div className="col-md-6 col-lg-4 mb-3">
                     {/* <Link to={'services/webdevelopment'}> */}
                     <div className="card customCard">

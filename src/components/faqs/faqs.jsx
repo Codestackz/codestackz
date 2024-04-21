@@ -12,7 +12,7 @@ const Faqs = () => {
 
     return (
         <>
-            <section className="bg-light">
+            <section style={{backgroundColor:"aliceblue", padding: "0px 26px"}}>
                 <div className="text-center h2 faqheader">
                     Frequently Asked Questions
                 </div>

@@ -162,7 +162,7 @@ const ContactusForm = () => {
       <section>
 
 
-        <div className="text-center p-4 pb-2 pb-sm-4 letConnectHeading ">
+        <div className="text-center p-5 pb-2 pb-sm-4 letConnectHeading ">
           <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }} data-aos="flip-right">Lets Connect</h1>
         </div>
 
@@ -265,7 +265,7 @@ const ContactusForm = () => {
                 </div>
                 <div className="row mb-3">
                   <div className="col-xs-12 col-sm-9 col-md-4 mx-auto ">
-                    <button className='btn btn-success btn-lg w-50' style={{ minWidth: "fit-content" }} onClick={handleSubmit}>Submit</button>
+                    <button className='btn btn-lg w-50' style={{ minWidth: "fit-content",color: "white", backgroundColor:"#3652AD"  }} onClick={handleSubmit}>Submit</button>
                     <div className={`spinner-border text-warning ms-3  ${inputErr.loading ? "": "d-none"}`} role="status">
                       <span className="visually-hidden">Loading...</span>
                     </div>

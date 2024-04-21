@@ -62,13 +62,16 @@
 
 @media screen and (min-width:992px) {
     .letConnectMain {
-        background-color: rgb(168, 169, 178);
+        /* background-color: rgb(168, 169, 178); */
+        background-color: white;
     }
 
     .letConnectHeading {
         height: fit-content;
-        background-color: rgb(168, 169, 178);
-        color: rgb(20, 53, 99);
+        /* background-color: rgb(168, 169, 178); */
+        background-color: white;
+        /* color: rgb(20, 53, 99); */
+        color: black;
     }
 
 

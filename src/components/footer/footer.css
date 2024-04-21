@@ -1,5 +1,17 @@
 .footerMain {
-    background-color: rgb(205, 209, 236);
+    /* background-color: rgb(205, 209, 236); */
+    background-color: rgba(19, 6, 34, 0.926);
+    color: white;
+
+    & .h5{
+        color: #3652AD;
+        font-weight: 600;
+    }
+
+}
+
+.fa-brands:hover{
+    color: #3652AD;
 }
 
 .footerBottom {
