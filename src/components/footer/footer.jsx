@@ -36,14 +36,12 @@ const Footer = () => {
                                     //     section.scrollIntoView();
                                     // }
                                     // const path = window.location.pathname;
-                                    // if()
-                                    if (section) {
-                                        const topOffset = section.getBoundingClientRect().top + window.scrollY;
+                                        if (section) {
+                                        const topOffset = section.getBoundingClientRect().top + window.scrollY - 92;
                                         window.scrollTo({ top: topOffset, behavior: 'smooth' });
                                     } else {
                                         setTimeout(() => {
                                             window.location.href = "/#ourservices";
-
                                         }, 100);
                                     }
 

@@ -31,8 +31,7 @@ const Services = () => {
 
     return (
         <>
-            {/* id='ourservices' */}
-            <div className="text-center p-4" style={{ backgroundColor: "", height: "fit-content" }} data-aos="zoom-in" duration="800">
+            <div id='ourservices' className="text-center p-4" style={{ backgroundColor: "", height: "fit-content" }} data-aos="zoom-in" duration="800">
                 <h1 style={{ fontFamily: "Headers !important", fontSize: "30px", fontWeight:"500"}}>Our Services</h1>
             </div>
             <div className="row  px-4 pb-4" style={{ backgroundColor: "" }} >
