@@ -22,7 +22,7 @@ const AboutusTeam = () => {
     return (
         <>
             <section style={{backgroundColor:"aliceblue"}}>
-                <h1 className="text-center py-4" style={{fontSize:"30px"}}>
+                <h1 className="text-center py-4" style={{fontSize:"30px", fontWeight:"500"}}>
                     Our Leadership
                 </h1>
                 <div className="row justify-content-evenly  px-5 pb-5">

@@ -13,7 +13,7 @@ const Faqs = () => {
     return (
         <>
             <section style={{backgroundColor:"aliceblue", padding: "0px 26px"}}>
-                <h1 className="text-center faqheader" style={{fontSize:"30px"}}>
+                <h1 className="text-center faqheader" style={{fontSize:"30px", fontWeight:"500"}}>
                     Frequently Asked Questions
                 </h1>
                 <div>

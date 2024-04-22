@@ -6,13 +6,13 @@
 
 .imgCardWidth {
     width: 18rem;
-    border: 2px solid blue;
     transition: 0.5s linear;
 }
 
 .imgCardWidth:hover{
     transition: 0.5s linear;
     transform: scale(1.03);
+    cursor: pointer;
 }
 
 @media screen and (max-width:360px) {
