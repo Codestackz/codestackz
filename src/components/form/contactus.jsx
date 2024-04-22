@@ -163,7 +163,7 @@ const ContactusForm = () => {
 
 
         <div className="text-center p-5 pb-2 pb-sm-4 letConnectHeading ">
-          <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }} data-aos="flip-right">Lets Connect</h1>
+          <h1 style={{ fontFamily: "Headers !important", fontSize: "30px" }} data-aos="flip-right">Lets Connect</h1>
         </div>
 
         <div className="row letConnectMain pt-3 ">

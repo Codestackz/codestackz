@@ -146,7 +146,7 @@
 
     .que a .bar {
         margin-top: 114%;
-        border-color: white;
+        border-color: #3652AD;
         border-width: 1.5px;
         border-style: solid;
         width: 25px;
@@ -190,7 +190,7 @@
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -o-transform: rotate(90deg);
-        border-color: white;
+        border-color: #3652AD;
         transition: all 0.4s;
         -moz-transition: all 0.4s;
         -webkit-transition: all 0.4s;

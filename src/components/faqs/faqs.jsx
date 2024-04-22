@@ -13,9 +13,9 @@ const Faqs = () => {
     return (
         <>
             <section style={{backgroundColor:"aliceblue", padding: "0px 26px"}}>
-                <div className="text-center h2 faqheader">
+                <h1 className="text-center faqheader" style={{fontSize:"30px"}}>
                     Frequently Asked Questions
-                </div>
+                </h1>
                 <div>
                     <div className="row pb-5">
                         <div className="col-md-9 col-sm-10 mx-auto p-0 mb-1 col-xs-11" data-aos="fade-up">
@@ -140,7 +140,7 @@ const Faqs = () => {
 
                                 <div className="collapse" id="faqans5">
                                     <div className="ans">
-                                        To get started, simply reach out to us via phone, email, or our website contact form. Once we understand you requirements, we'll guide you through the process and provide you with a tailored solution.
+                                        To get started, simply reach out to us via phone, email, or our website contact form. Once we understand your requirements, we'll guide you through the process and provide you with a tailored solution.
                                     </div>
                                 </div>
                             </div>

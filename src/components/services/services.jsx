@@ -32,10 +32,10 @@ const Services = () => {
     return (
         <>
             {/* id='ourservices' */}
-            <div className="text-center p-4" style={{ backgroundColor: "aliceblue", height: "fit-content" }} data-aos="zoom-out">
-                <h1 style={{ fontFamily: "Headers !important", fontSize: "32px" }}>Our Services</h1>
+            <div className="text-center p-4" style={{ backgroundColor: "", height: "fit-content" }} data-aos="zoom-in" duration="800">
+                <h1 style={{ fontFamily: "Headers !important", fontSize: "30px" }}>Our Services</h1>
             </div>
-            <div className="row  px-4 pb-4" style={{ backgroundColor: "aliceblue" }} >
+            <div className="row  px-4 pb-4" style={{ backgroundColor: "" }} >
                 <div className="col-md-6 col-lg-4 mb-3">
                     {/* <Link to={'services/webdevelopment'}> */}
                     <div className="card customCard">
@@ -53,7 +53,7 @@ const Services = () => {
                     <div className="card customCard">
                         <div className='card-header bg-white border-0 d-flex align-items-center'>
                             <img className="servicesIcon" src={appDImg} alt="" />
-                            <span className="h5 ms-4">Mobile  Application Development</span>
+                            <span className="h5 ms-4">Mobile App Development</span>
                         </div>
                         <div className="card-body">
                             <p>Experience the power of mobile application development tailored to your needs. Our expert team crafts intuitive, high-performance mobile apps that captivate users and drive business growth. Elevate your brand's presence in the palm of your users' hands.</p>

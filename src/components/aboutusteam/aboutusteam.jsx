@@ -22,9 +22,9 @@ const AboutusTeam = () => {
     return (
         <>
             <section>
-                <div className="text-center py-4 h2 fw-bold">
+                <h1 className="text-center py-4" style={{fontSize:"30px"}}>
                     Our Leadership
-                </div>
+                </h1>
                 <div className="row justify-content-evenly  px-5 pb-5">
                     <div className="col-md-3 my-4 p-0 iconshadow mx-4" style={{ width: "fit-content" }}>
                         <div className="card imgCardWidth">

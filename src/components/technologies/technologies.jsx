@@ -23,7 +23,7 @@ const Technologies = () => {
     <>
       <section className="mb-3  technoDiv">
         <div className="p-4 text-center">
-          <h2 className="h2 fw-bold" data-aos="flip-right">Technologies We work with</h2>
+          <h1 style={{fontSize:"30px"}} data-aos="flip-right">Technologies We work with</h1>
         </div>
         <div className="row fs-5">
           <div className="col-xl-9 col-lg-11 col-md-9 col-sm-10 mx-auto techText">
