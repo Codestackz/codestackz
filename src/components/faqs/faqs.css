@@ -5,20 +5,30 @@
 
 
 .que {
-    background-color: rgb(101, 96, 140);
-    color: white;
+    /* background-color: rgb(101, 96, 140); */
+    /* background-color: rgb(242, 243, 245); */
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 4px, rgba(0, 0, 0, 0.15) 0px 3px 4px;
+    color: #3652AD;
+    border: 1px solid black;
     font-size: 18px;
     font-weight: 500;
     padding: 18px 26px;
     display: block;
     position: relative;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .ans {
-    background-color: rgb(225, 224, 235);
+    /* background-color: rgb(225, 224, 235); */
+    background-color: rgb(241, 241, 252);
     padding: 18px;
     margin-bottom: 0px;
+    border: 1px solid black;
+    border-top: none;
     font-weight: 450;
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 7px;
 }
 
 
@@ -39,7 +49,7 @@
     -moz-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
-    color: #9a4a5a;
+    /* color: #9a4a5a; */
 }
 
 .bardiv {
@@ -58,7 +68,7 @@
 
 .que a .bar {
     margin-top: 50%;
-    border-color: white;
+    border-color: #3652AD;
     border-width: 1.5px;
     border-style: solid;
     width: 25px;
@@ -102,7 +112,7 @@
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
-    border-color: white;
+    border-color: #3652AD;
     transition: all 0.4s;
     -moz-transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -136,7 +146,7 @@
 
     .que a .bar {
         margin-top: 114%;
-        border-color: white;
+        border-color: #3652AD;
         border-width: 1.5px;
         border-style: solid;
         width: 25px;
@@ -180,7 +190,7 @@
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -o-transform: rotate(90deg);
-        border-color: white;
+        border-color: #3652AD;
         transition: all 0.4s;
         -moz-transition: all 0.4s;
         -webkit-transition: all 0.4s;

@@ -2,6 +2,11 @@
     height: 100%;
     padding: 20px;
     cursor: pointer;
+
+    & .h5{
+        color: #244486;
+        /* color: #3652AD; */
+    }
 }
 
 a{

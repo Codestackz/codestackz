@@ -23,10 +23,10 @@ const Technologies = () => {
     <>
       <section className="mb-3  technoDiv">
         <div className="p-4 text-center">
-          <h2 className="h2 fw-bold" data-aos="flip-right">Technologies We work with</h2>
+          <h1 style={{fontSize:"30px", fontWeight:"500"}} data-aos="flip-right">Technologies We work with</h1>
         </div>
         <div className="row fs-5">
-          <div className="col-xl-9 col-lg-11 col-md-9 col-sm-10 mx-auto techText">
+          <div className="col-xl-9 col-lg-11 col-md-9 col-sm-10 mx-auto techText" data-aos="zoom-in" duration="800">
             <p className=''>We understand that technology in web development changes frequently, and it's important for businesses to utilize the latest tools. We stay up-to-date with the latest trends and technologies to offer creative web solutions. </p>
             <p className='d-none d-md-block'>Our dedicated and experienced team works with a variety of tools such as HTML5, CSS, Bootstrap, JavaScript, React js, Node js, Angular, MERN, MEAN, UI/UX Design, WordPress, Shopify, Android, and more. All these technologies allow us to develop scalable websites and apps for our clients.</p>
           </div>
