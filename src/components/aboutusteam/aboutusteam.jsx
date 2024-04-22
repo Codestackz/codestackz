@@ -21,7 +21,7 @@ const AboutusTeam = () => {
 
     return (
         <>
-            <section>
+            <section style={{backgroundColor:"aliceblue"}}>
                 <h1 className="text-center py-4" style={{fontSize:"30px"}}>
                     Our Leadership
                 </h1>

@@ -19,7 +19,7 @@ const Chooseus = () => {
     return (
         <>
             <section className='reasonsDiv' data-aos="fade-up">
-                <h1 className="py-4 text-center mb-4" style={{fontSize:"30px"}}>
+                <h1 className="py-4 text-center mb-4" style={{fontSize:"30px"}} data-aos="zoom-in" duration="800">
                     Reasons to choose Codestackz
                 </h1>
                 <div className="row p-4 pb-5">

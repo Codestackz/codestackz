@@ -43,6 +43,8 @@
     object-fit: cover;
     object-position: bottom bottom;
     border-top-right-radius: 900px 100px;
+    transition: 0.8s;
+   
 }
 
 #inner img:hover,
