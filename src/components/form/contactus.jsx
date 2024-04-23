@@ -112,9 +112,14 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
 
-    // if(grecaptcha.getResponse()==""){
-    //   return;
-    // }
+    if (grecaptcha.getResponse() == "") {
+      var submitButton = document.getElementById('formSubmitBtn');
+      submitButton.classList.add('shake');
+      setTimeout(function () {
+        submitButton.classList.remove('shake');
+      }, 1000);
+      return false;
+    }
 
     // alert("form is valid to submit.")
     setInputErr(prevState => ({ ...prevState, loading: "yes" }))
@@ -266,13 +271,13 @@ const ContactusForm = () => {
                 </div>
                 <div className="row mb-3">
                   <div className="col-xs-12 col-sm-9 col-md-4 mx-auto ">
-                    <button id='formSubmitBtn' className='btn btn-lg' style={{ }} onClick={handleSubmit}>
+                    <button id='formSubmitBtn' className='btn btn-lg' style={{}} onClick={handleSubmit}>
                       <div className={`fs-5 my-1 ${inputErr.loading ? "d-none" : ""}`}>Submit</div>
-                      
-                    <div className={`spinner-border text-white ${inputErr.loading ? "" : "d-none"}`} style={{maxHeight:"32px"}} role="status">
-                      <span className="visually-hidden">Loading...</span>
-                    </div>
-                      </button>
+
+                      <div className={`spinner-border text-white ${inputErr.loading ? "" : "d-none"}`} style={{ maxHeight: "32px" }} role="status">
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </button>
                   </div>
                   <div className="col-md-8"></div>
 
@@ -308,13 +313,13 @@ const ContactusForm = () => {
           </div>
 
           <div className="col-md-4 d-none d-lg-block" data-aos="fade-right">
-            <div style={{ border: "0px solid rgba(19, 6, 34, 0.926)",backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
+            <div style={{ border: "0px solid rgba(19, 6, 34, 0.926)", backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
 
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section >
+        </div>
+      </section >
     </>
   )
 }
