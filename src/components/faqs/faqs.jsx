@@ -152,7 +152,7 @@ const Faqs = () => {
                                     <a >
                                         <div className='row fw-bolder '>
                                             <div className="col-md-11 customWidthQuestion">
-                                                How do you communicate and collaborate with you clients?
+                                                How do you communicate and collaborate with your clients?
                                             </div>
                                             <div className="col-md-1 customWidthBar">
                                                 <div className='bardiv d-flex align-items-center'>

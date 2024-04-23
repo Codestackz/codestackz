@@ -1,3 +1,5 @@
+
+
 #formbg {
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,24 +17,42 @@
     width: 90%;
 }
 
+/* input::placeholder, textarea::placeholder{
+    color: black;
+} */
+
 #contactusForm select {
     padding: 13px 15px;
     margin-bottom: 0px;
     outline: none;
     width: 90%;
+    color: grey;
 }
+/* 
+#contactusForm select[value="none"]{
+    color: red;
+} */
+
 
 #contactusForm option {
     padding: 13px;
     margin-bottom: 0px;
     outline: none;
     width: 90%;
+    color: grey;
 }
 
 
 .inputField:focus {
     border: 3px solid black;
 
+}
+
+#formSubmitBtn{
+    width: 50%;
+    min-width: fit-content;
+    color: white;
+    background-color: #3652AD; 
 }
 
 .letConnectMain {
@@ -62,8 +82,10 @@
 
 @media screen and (min-width:992px) {
     .letConnectMain {
-        /* background-color: rgb(168, 169, 178); */
-        background-color: white;
+        background-image: url('/images/formbg.jpeg');
+        background-size: 74% 100%;
+        background-repeat: no-repeat;
+        padding-top: 71px;
     }
 
     .letConnectHeading {
@@ -74,7 +96,15 @@
         color: black;
     }
 
+    
+}
 
+
+@media screen and (max-width:1199px) {
+    .letConnectMain {
+        padding: 50px 0px 50px 0px;
+        position: relative;
+    }
 }
 
 @media screen and (max-width:991px) {
@@ -88,7 +118,7 @@
     }
 
     .letConnectMain {
-        padding: 0px;
+        padding-top: 20px;
         position: relative;
     }
 
@@ -127,12 +157,6 @@
 
 }
 
-@media screen and (max-width:1199px) {
-    .letConnectMain {
-        padding: 0px 0px 40px 0px;
-        position: relative;
-    }
-}
 
 @media screen and (max-width:767px) {
     .letConnectMain {
@@ -156,6 +180,10 @@
         width: 85%;
     }
 
+    #errAlertSelectType{
+        margin-left: 9%;
+    }
+
     #captchaDiv {
         display: flex;
         justify-content: center;
@@ -163,5 +191,9 @@
 
     #formbg {
         height: 600px;
+    }
+
+    #formSubmitBtn{
+        width: 30%;
     }
 }
