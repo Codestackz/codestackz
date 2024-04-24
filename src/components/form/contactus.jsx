@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import contactusImg from '/images/cai4.webp'
-import formbgImg from '/images/formbg.jpeg'
+import contactusImg from '/images/contactFormImg2.webp'
 import Axios from 'axios'
 
 import AOS from 'aos'
@@ -40,6 +39,17 @@ const ContactusForm = () => {
       setInputErr({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "", submitErr: "", loading: "" });
     }, 3700)
 
+  }
+
+  const handleSelect = () => {
+    let serviceType = serviceTypeRef.current.value.trim();
+    // alert(serviceType)
+    if (serviceType != "none") {
+      serviceTypeRef.current.classList.remove('inputSelectGrey');
+    }
+    else {
+      serviceTypeRef.current.classList.add('inputSelectGrey');
+    }
   }
 
   const handleSubmit = (e) => {
@@ -112,14 +122,14 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
 
-    if (grecaptcha.getResponse() == "") {
-      var submitButton = document.getElementById('formSubmitBtn');
-      submitButton.classList.add('shake');
-      setTimeout(function () {
-        submitButton.classList.remove('shake');
-      }, 1000);
-      return false;
-    }
+    // if (grecaptcha.getResponse() == "") {
+    //   var submitButton = document.getElementById('formSubmitBtn');
+    //   submitButton.classList.add('shake');
+    //   setTimeout(function () {
+    //     submitButton.classList.remove('shake');
+    //   }, 1000);
+    //   return false;
+    // }
 
     // alert("form is valid to submit.")
     setInputErr(prevState => ({ ...prevState, loading: "yes" }))
@@ -180,9 +190,9 @@ const ContactusForm = () => {
             </div>
           </div>
 
-          <div className="offset-lg-1 col-md-12 col-lg-6 mdForm" >
+          <div className="offset-lg-1 col-md-12 col-lg-6 mdForm">
             <div className='' data-aos="fade-left">
-              <form action=" " id='contactusForm'>
+              <form action=" " id='contactusForm' >
                 <div className="row" >
                   <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto"  >
                     <input type="text" name="name" id="" placeholder="Name" className='inputField' ref={nameRef} /> <br />
@@ -226,8 +236,8 @@ const ContactusForm = () => {
                     </div>
                   </div>
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
-                    <select name="serviceType" id="" className='inputField' ref={serviceTypeRef}>
-                      <option value="none" >Service Type</option>
+                    <select name="serviceType" id="" className='inputField inputSelectGrey' ref={serviceTypeRef} onChange={handleSelect}>
+                      <option value="none" style={{ color: 'grey' }}>Service Type</option>
                       <option value="web">Web Dev</option>
                       <option value="app">App Dev</option>
                       <option value="webMaintenance">Web Maintenance</option>

@@ -7,6 +7,7 @@
     width: 100%;
     height: 500px;
     filter: blur(10px);
+    min-height: 560px;
 }
 
 
@@ -26,20 +27,22 @@
     margin-bottom: 0px;
     outline: none;
     width: 90%;
+}
+
+.inputSelectGrey{
     color: grey;
 }
-/* 
-#contactusForm select[value="none"]{
-    color: red;
-} */
 
+/* .inputSelectBlack{
+    color: black;
+} */
 
 #contactusForm option {
     padding: 13px;
     margin-bottom: 0px;
     outline: none;
     width: 90%;
-    color: grey;
+    color: black;
 }
 
 
@@ -53,6 +56,13 @@
     min-width: fit-content;
     color: white;
     background-color: #3652AD; 
+}
+#formSubmitBtn:hover{
+    background-color: #24419e; 
+}
+#formSubmitBtn:active{
+    border-color: #24419e;
+    transform: scale(.97);
 }
 
 .shake {
@@ -117,6 +127,12 @@
         background-size: 74% 100%;
         background-repeat: no-repeat;
         padding-top: 71px;
+        min-height: 822px;
+    }
+
+    #contactusForm{
+        min-height:685px;
+        padding: 40px;
     }
 
     .letConnectHeading {
@@ -190,6 +206,11 @@
 
 
 @media screen and (max-width:767px) {
+
+    #formbg{
+        min-height: 710px;
+    }
+
     .letConnectMain {
         padding: 20px 0px 90px 0px;
     }
@@ -197,6 +218,8 @@
     .mdForm {
         width: 100%;
         text-align: center;
+        padding-bottom: 53px;
+        
     }
 
     .inputField {
