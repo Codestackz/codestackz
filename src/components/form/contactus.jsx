@@ -122,14 +122,14 @@ const ContactusForm = () => {
       setInputErr(prevState => ({ ...prevState, aboutProject: "" }));
     }
 
-    // if (grecaptcha.getResponse() == "") {
-    //   var submitButton = document.getElementById('formSubmitBtn');
-    //   submitButton.classList.add('shake');
-    //   setTimeout(function () {
-    //     submitButton.classList.remove('shake');
-    //   }, 1000);
-    //   return false;
-    // }
+    if (grecaptcha.getResponse() == "") {
+      var submitButton = document.getElementById('formSubmitBtn');
+      submitButton.classList.add('shake');
+      setTimeout(function () {
+        submitButton.classList.remove('shake');
+      }, 1000);
+      return false;
+    }
 
     // alert("form is valid to submit.")
     setInputErr(prevState => ({ ...prevState, loading: "yes" }))
