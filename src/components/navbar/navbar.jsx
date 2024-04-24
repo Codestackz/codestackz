@@ -72,7 +72,7 @@ const NavBar = () => {
                   <span className="nav-link dropdown-toggle navLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Services
                   </span>
-                  <div className="dropdown-menu w-100 border-0 text-white servicesDropdownDiv ms-4 mb-4" >
+                  <div className="dropdown-menu w-100 border-0 text-white servicesDropdownDiv ms-4 mb-4 " >
                     <ul type='none' className="p-0">
                       <div data-bs-dismiss="offcanvas" aria-label="Close">
                         {/* <Link to={'/services/webdevelopment'}> */}

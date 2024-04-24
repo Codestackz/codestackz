@@ -12,14 +12,6 @@ const Footer = () => {
         AOS.init({ duration: 1000, once: "true" });
     })
 
-    // setTimeout(()=>{
-    //     function scrollToSection(sectionId) {
-    //         const section = document.getElementById(sectionId);
-    //         if (section) {
-    //             section.scrollIntoView();
-    //         }
-    //     }
-    // },2000)
 
     return (
         <>
@@ -109,7 +101,7 @@ const Footer = () => {
                 <div className="row footerBottom " style={{ backgroundColor: "#E9F6FF" }}>
                     <div className="col d-flex align-items-center justify-content-between">
                         <div id='footerBottomBrandname'>
-                            <Link className="navbar-brand fs-3 fw-bold text-white" id="brandName" to={'/'} data-aos="fade-right" onClick={() => window.scrollTo(0, 0)}>
+                            <Link  to={'/'}  onClick={() => window.scrollTo(0, 0)}>
                                 <img src={cszlogo} style={{ width: "40px", height: "40px", marginRight: "5px" }}></img>
                             </Link>
                             <i className="fa-regular fa-copyright" style={{ color: "#000000" }}></i> <span className='fw-bold'>2024 Codestackz</span>
