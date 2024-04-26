@@ -4,6 +4,10 @@
 }
 
 
+.servicesdropbutton:hover .servicesDropdownDiv{
+    display: block;
+}
+
 #brandName {
     transition: 1s;
 }
