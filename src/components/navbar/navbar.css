@@ -113,37 +113,46 @@
 
 @media screen and (min-width: 1200px) {
     .servicesDropdownDiv {
-        background-color: aliceblue;
-        padding: 0px;
+        background-color: #3652AD;
+        color: white;
+        padding-top: 25px;
         width: fit-content;
-        min-width: 18rem;
+        min-width: 14.5rem;
         font-size: 16px;
         position: absolute;
         left: 40%;
-        top: 10%;
-        transform: translateX(-40%);
+        /* top: 130%; */
+        transform: translateX(-30%);
         /* animation: dropdown-open 3s ease-in-out; */
 
 
     }
 
     .servicesDropdownDiv ul{
+        width: fit-content;
+        margin: auto;
         animation: dropdown-open .3s forwards;
 
     }
+    .servicesDropdownDiv ul:hover{
+        cursor: pointer;
+    }
 
-
+    /* .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+       */
 
 
     .servicesNavLink {
-        color: black;
+        color: white;
         padding: 15px;
         margin: 5px;
         font-weight: 500;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid white;
     }
 
-    .servicesNavLinkWebConsult {
+    .servicesNavLinkLogo {
         margin-bottom: 2px;
         border-bottom: 0px;
     }

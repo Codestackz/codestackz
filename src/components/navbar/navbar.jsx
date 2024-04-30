@@ -97,8 +97,15 @@ const NavBar = () => {
                       </div>
                       <div data-bs-dismiss="offcanvas" aria-label="Close">
                         {/* <Link to={'/services/webdevelopment'}> */}
-                          <li className="servicesNavLink servicesNavLinkWebConsult">
+                          <li className="servicesNavLink">
                             Web Consultancy
+                          </li>
+                        {/* </Link> */}
+                      </div>
+                      <div data-bs-dismiss="offcanvas" aria-label="Close">
+                        {/* <Link to={'/services/webdevelopment'}> */}
+                          <li className="servicesNavLink servicesNavLinkLogo">
+                            Logo Designing
                           </li>
                         {/* </Link> */}
                       </div>
