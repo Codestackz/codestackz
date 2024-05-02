@@ -173,7 +173,7 @@ const ContactusForm = () => {
     }
 
     if (aboutProject == "") {
-      setInputErr(prevState => ({ ...prevState, aboutProject: "Please telll something" }));
+      setInputErr(prevState => ({ ...prevState, aboutProject: "Please tell something" }));
       emptyErr();
       aboutProjectRef.current.focus();
       return;
