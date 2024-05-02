@@ -1,14 +1,78 @@
 import { useState, useRef, useEffect } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
 import contactusImg from '/images/contactFormImg2.webp'
+import contactusImgBW from '/images/formbg.jpeg'
+
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+
+import { makeStyles } from '@mui/styles';
+
+
+const useStyles = makeStyles({
+
+  textFielsCustomMui: {
+    // Root class for the input field
+    "& .MuiOutlinedInput-root": {
+      color: "#FFFFFF",
+      fontFamily: "Arial",
+      // fontWeight: "bold",
+      // Class for the border around the input field
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#FFFFFF",
+        borderWidth: "2px",
+      },
+
+    },
+    // Class for the label of the input field
+    "& .MuiInputLabel-outlined": {
+      color: "#FFFFFF",
+      fontWeight: "bold",
+    },
+  }
+})
+
+// Define custom styles using makeStyles
+const useStyles2 = makeStyles({
+  // Add your custom styles here
+  root: {
+    '& .MuiOutlinedInput-root': {
+      borderColor: '#FE0A06',
+      borderWidth: '2px',
+    },
+    '& .MuiInputLabel-outlined': {
+      color: '#24FE06',
+      fontWeight: 'bold',
+    },
+  },
+  greenFocus: {
+    // Use the green-focus class defined in CSS
+    '& .MuiOutlinedInput-root': {
+      color: '#06FAFE',
+    },
+    '& .MuiInputLabel-outlined': {
+      color: '#D8FE06',
+    },
+    // This will apply the focused color only when the TextField is focused
+    '& .Mui-focused': {
+      color: '#FE06FE'
+    }
+  }
+});
+
+
 import Axios from 'axios'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './contactus.css'
+import { json } from 'react-router-dom';
 
 
 const ContactusForm = () => {
+
+  const classes = useStyles();
+
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -23,6 +87,8 @@ const ContactusForm = () => {
   const aboutProjectRef = useRef(null);
 
   const [inputErr, setInputErr] = useState({ name: "", email: "", contact: "", serviceType: "", aboutProject: "", submitted: "", submitErr: "", loading: "" })
+  const [selectValue, setSelectValue] = useState('none');
+  console.log(selectValue);
 
   const emptyErr = () => {
     setInputErr(prevState => ({ ...prevState, loading: "" }))
@@ -41,25 +107,19 @@ const ContactusForm = () => {
 
   }
 
-  const handleSelect = () => {
-    let serviceType = serviceTypeRef.current.value.trim();
-    // alert(serviceType)
-    if (serviceType != "none") {
-      serviceTypeRef.current.classList.remove('inputSelectGrey');
-    }
-    else {
-      serviceTypeRef.current.classList.add('inputSelectGrey');
-    }
+  const handleSelect = (e) => {
+    setSelectValue(e.target.value);
+
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    // alert(nameRef.current.value)
 
     let name = nameRef.current.value.trim();
     let email = emailRef.current.value.trim();
     let contact = contactRef.current.value.trim();
-    let serviceType = serviceTypeRef.current.value.trim();
+    let serviceType = selectValue;
     let aboutProject = aboutProjectRef.current.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -185,7 +245,7 @@ const ContactusForm = () => {
         <div className="row letConnectMain ">
 
           <div className="col-md-12 d-block d-lg-none" data-aos="fade-right">
-            <div id='formbg' style={{ backgroundImage: `url(${contactusImg})` }}>
+            <div id='formbg' style={{ backgroundImage: `url(${contactusImgBW})`, backgroundPosition:"right" }}>
 
             </div>
           </div>
@@ -194,8 +254,41 @@ const ContactusForm = () => {
             <div className='' data-aos="fade-left">
               <form action=" " id='contactusForm' >
                 <div className="row" >
-                  <div className=" col-xs-12 col-sm-9 col-md-6 mx-auto"  >
-                    <input type="text" name="name" id="" placeholder="Name" className='inputField' ref={nameRef} /> <br />
+                  <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
+                    <div className="inputFieldOuterDiv" >
+                      <TextField
+                        id=""
+                        label="Name"
+                        type='text'
+                        fullWidth
+                        inputRef={nameRef}
+                        // className={`${classes.textFielsCustomMui}`}
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiOutlinedInput-root": {
+                            color: "#FFFFFF",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            // Class for the border around the input field
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#FFFFFF",
+                              borderWidth: "2px",
+                            },
+                          },
+                          "&:hover:not(.Mui-focused)": {
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#ccc",
+                            },
+                          },
+                          // Class for the label of the input field
+                          "& .MuiInputLabel-outlined": {
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          },
+                        }}
+                      />
+                      <br />
+                    </div>
                     <div className='errField'>
                       <div id='errAlertName' className={`alert alert-danger d-flex align-items-center ${inputErr.name ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
@@ -208,7 +301,40 @@ const ContactusForm = () => {
                     </div>
                   </div>
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
-                    <input type="email" name="email" id="" placeholder="Email" className='inputField' ref={emailRef} /> <br />
+                    <div className="inputFieldOuterDiv" >
+                      <TextField
+                        id=""
+                        label="Email"
+                        type='email'
+                        fullWidth
+                        inputRef={emailRef}
+                        // className={`${classes.textFielsCustomMui}`}
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiOutlinedInput-root": {
+                            color: "#FFFFFF",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            // Class for the border around the input field
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#FFFFFF",
+                              borderWidth: "2px",
+                            },
+                          },
+                          "&:hover:not(.Mui-focused)": {
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#ccc",
+                            },
+                          },
+                          // Class for the label of the input field
+                          "& .MuiInputLabel-outlined": {
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          },
+                        }}
+                      />
+                      <br />
+                    </div>
                     <div className='errField'>
                       <div id='errAlertEmail' className={`alert alert-danger d-flex align-items-center ${inputErr.email ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
@@ -223,7 +349,40 @@ const ContactusForm = () => {
                 </div>
                 <div className="row">
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
-                    <input type="number" name="contact" id="" placeholder="Contact" className='inputField' ref={contactRef} /> <br />
+                    <div className="inputFieldOuterDiv" >
+                      <TextField
+                        id=""
+                        label="Contact"
+                        type='number'
+                        fullWidth
+                        inputRef={contactRef}
+                        // className={`${classes.textFielsCustomMui}`}
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiOutlinedInput-root": {
+                            color: "#FFFFFF",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            // Class for the border around the input field
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#FFFFFF",
+                              borderWidth: "2px",
+                            },
+                          },
+                          "&:hover:not(.Mui-focused)": {
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#ccc",
+                            },
+                          },
+                          // Class for the label of the input field
+                          "& .MuiInputLabel-outlined": {
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          },
+                        }}
+                      />
+                      <br />
+                    </div>
                     <div className='errField'>
                       <div id='errAlertContact' className={`alert alert-danger d-flex align-items-center ${inputErr.contact ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
@@ -236,14 +395,61 @@ const ContactusForm = () => {
                     </div>
                   </div>
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
-                    <select name="serviceType" id="" className='inputField inputSelectGrey' ref={serviceTypeRef} onChange={handleSelect}>
-                      <option value="none" style={{ color: 'grey' }}>Service Type</option>
-                      <option value="web">Web Dev</option>
-                      <option value="app">App Dev</option>
-                      <option value="webMaintenance">Web Maintenance</option>
-                    </select> <br />
-                    <div className='errField errFieldSelect'>
-                      <div id='errAlertSelectType' className={`alert alert-danger d-flex align-items-center ${inputErr.serviceType ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
+                    <div className="inputFieldOuterDiv" >
+                      {/* <Box sx={{ minWidth: 10 }}> */}
+                      {/* <FormControl fullWidth> */}
+                      <TextField
+                        select
+                        label="Service Type"
+                        value={selectValue}
+                        fullWidth
+                        inputRef={serviceTypeRef}
+                        onChange={handleSelect}
+                        SelectProps={{
+                          sx: {
+                            "& .MuiSelect-icon": {
+                              color: '#FFFFFF',
+                            },
+                          },
+                        //   multiple:true
+                        }}
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiOutlinedInput-root": {
+                            color: "#FFFFFF",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            // Class for the border around the input field
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#FFFFFF",
+                              borderWidth: "2px",
+                            },
+                          },
+                          "&:hover:not(.Mui-focused)": {
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#ccc",
+                            },
+                          },
+                          // Class for the label of the input field
+                          "& .MuiInputLabel-outlined": {
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          },
+                        }}
+                      >
+                        <MenuItem value={'none'} sx={{}}  >None</MenuItem>
+                        <MenuItem value={'webDev'}>Web Development</MenuItem>
+                        <MenuItem value={'appDev'}>App Development</MenuItem>
+                        <MenuItem value={'webMaintenance'}>Web Maintenance</MenuItem>
+                        <MenuItem value={'webConsultancy'}>Web Consultancy</MenuItem>
+                        <MenuItem value={'logoDesigning'}>Logo Designing</MenuItem>
+                      </TextField>
+                      {/* </FormControl> */}
+                      {/* </Box> */}
+                      <br />
+                    </div>
+                    <div className='errField'>
+                      <div id='errAlertServiceType' className={`alert alert-danger d-flex align-items-center ${inputErr.serviceType ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
                           <i className="fa-solid fa-triangle-exclamation" style={{ color: "#f20202" }}></i>
                         </div>
@@ -256,7 +462,42 @@ const ContactusForm = () => {
                 </div>
                 <div className="row">
                   <div className="col-xs-12 col-sm-9 col-md-8 mx-auto">
-                    <textarea name="more" id="" cols="30" rows="5" placeholder="Tell us more about your project" className='inputField' ref={aboutProjectRef}></textarea> <br />
+                    {/* <div className="col-xs-12 col-sm-9 col-md-6 mx-auto"> */}
+                    <div className="inputFieldOuterDiv" >
+                      <TextField
+                        id=""
+                        label="Tell us more about your project     "
+                        multiline
+                        fullWidth
+                        rows={5}
+                        inputRef={aboutProjectRef}
+                        // className={`${classes.textFielsCustomMui}`}
+                        sx={{
+                          // Root class for the input field
+                          "& .MuiOutlinedInput-root": {
+                            color: "#FFFFFF",
+                            fontFamily: "Arial",
+                            // fontWeight: "bold",
+                            // Class for the border around the input field
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#FFFFFF",
+                              borderWidth: "2px",
+                            },
+                          },
+                          "&:hover:not(.Mui-focused)": {
+                            "& .MuiOutlinedInput-notchedOutline": {
+                              borderColor: "#ccc",
+                            },
+                          },
+                          // Class for the label of the input field
+                          "& .MuiInputLabel-outlined": {
+                            color: "#FFFFFF",
+                            fontWeight: "bold",
+                          },
+                        }}
+                      />
+                      <br />
+                    </div>
                     <div className='errField'>
                       <div id='errAlertAboutProject' className={`alert alert-danger d-flex align-items-center ${inputErr.aboutProject ? "" : "d-none"}`} style={{ width: "fit-content" }} role="alert">
                         <div className='me-2'>
@@ -328,7 +569,7 @@ const ContactusForm = () => {
             </div>
           </div>
 
-        </div>
+        </div >
       </section >
     </>
   )

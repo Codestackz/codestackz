@@ -12,9 +12,9 @@ const Contactusicons = () => {
 
     return (
         <>
-            <div className="row justify-content-around">
+            <div className="row justify-content-around ">
                 <div className="col md-10 col-lg-9  mx-auto ">
-                    <div className="row p-5">
+                    <div className="row  p-5 pt-0 p-sm-5">
                         <div className='col-md-4 text-center mb-4' data-aos="fade-right">
                             <a href="tel:9781789405">
                                 <div className="iconshadow px-3 py-3">

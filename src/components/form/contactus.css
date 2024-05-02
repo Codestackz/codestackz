@@ -10,6 +10,9 @@
     min-height: 560px;
 }
 
+.inputFieldOuterDiv{
+    width: 90%;
+}
 
 .inputField {
     padding: 10px 15px;
@@ -169,6 +172,10 @@
         position: relative;
     }
 
+    #formbg{
+        min-height: 670px;
+    }
+
 
     .inputField {
         padding: 4px 15px;
@@ -208,13 +215,17 @@
 @media screen and (max-width:767px) {
 
     #formbg{
-        min-height: 710px;
+        min-height: 880px;
     }
 
     .letConnectMain {
         padding: 20px 0px 90px 0px;
     }
 
+    .inputFieldOuterDiv{
+        width: 85%;
+        margin: auto;
+    }
     .mdForm {
         width: 100%;
         text-align: center;
@@ -234,9 +245,7 @@
         width: 85%;
     }
 
-    #errAlertSelectType{
-        margin-left: 9%;
-    }
+
 
     #captchaDiv {
         display: flex;
