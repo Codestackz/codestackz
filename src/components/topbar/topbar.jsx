@@ -5,7 +5,7 @@ const TopBar = () => {
                 <div className="container px-3 my-auto">
                     <a className="fw-bold" href="mailto:info@codestackz.in">info@codestackz.in</a>
                     <span className="float-end fw-bold d-lg-none">
-                        <a href="">
+                        <a href="https://www.linkedin.com/company/102062704/admin/feed/posts/" target="blank">
                             <i className="fa-brands fa-linkedin-in fs-4 me-2" style={{ color: "#000000" }}></i>
                         </a>
                         <a href="https://www.instagram.com/codestackz" target='_blank' >

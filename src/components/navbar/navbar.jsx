@@ -124,10 +124,10 @@ const NavBar = () => {
                 </li>
 
                 <li className="ms-auto d-none d-xl-block">
-                  <a className="btn ltblue px-4  d-none d-lg-block d-xl-block navButton" href='tel:9781789405'>978 1789 405</a>
+                  <a className="btn ltblue px-4  d-none d-lg-block d-xl-block navButton" href='tel:9781789405'>+91 9781789405</a>
                 </li>
                 <li className="ms-3 d-none d-xl-block">
-                  <Link className="btn ltblue px-4  d-none d-lg-block d-xl-block navButton" to={'/contactus'} onClick={() => window.scrollTo(0, 0)}>Quote on the house</Link>
+                  <Link className="btn ltblue px-4  d-none d-lg-block d-xl-block navButton" to={'/contactus'} onClick={() => window.scrollTo(0, 0)}>Request a Quote</Link>
                 </li>
               </ul>
             </div>

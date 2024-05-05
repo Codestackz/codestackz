@@ -81,13 +81,13 @@ const Footer = () => {
 
                             <span className="h5">Contact Us</span>
                             <ul style={{ padding: "10px 20px" }}>
-                                <li><a href="tel:9781789405" style={{ textDecoration: "none" }}>978 1789 405</a></li>
+                                <li><a href="tel:9781789405" style={{ textDecoration: "none" }}>+91 9781789405</a></li>
                                 <li><a href="mailto:info@codestackz.in" style={{ textDecoration: "none" }}>info@codestackz.in</a></li>
                                 <li type="none" className='mt-3'>
                                     <a href="https://www.instagram.com/codestackz" target='_blank'>
                                         <i className="fa-brands fa-instagram fw-bold fs-3 me-2"></i>
                                     </a>
-                                    <a href="">
+                                    <a href="https://www.linkedin.com/company/102062704/admin/feed/posts/" target='blank'>
                                         <i className="fa-brands fa-linkedin-in fs-3 me-2"></i>
                                     </a>
                                     <a href="">
