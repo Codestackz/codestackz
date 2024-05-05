@@ -98,14 +98,14 @@
 } */
 
   
-.custom-form::before {
+.custom_form::before {
     position: absolute;
     content: "";
     top: 3%;
     left: 3%;
     height: 94%;
-    width: 94%;
-    border: 2px solid white;
+    width: 93.5%;
+    border: 3px solid white;
     z-index: 1;
 }
 

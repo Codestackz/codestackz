@@ -188,7 +188,7 @@ const ContactusForm = () => {
       setTimeout(function () {
         submitButton.classList.remove('shake');
       }, 1000);
-      return false;
+      return false; 
     }
 
     // alert("form is valid to submit.")
@@ -561,7 +561,7 @@ const ContactusForm = () => {
           </div>
 
           <div className="col-md-4 d-none d-lg-block" data-aos="fade-right">
-            <div class="custom-form" style={{ border: "0px solid rgba(19, 6, 34, 0.926)", backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", position: "relative", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
+            <div className="custom_form" style={{ border: "0px solid rgba(19, 6, 34, 0.926)", backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", position: "relative", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
 
             </div>
           </div>
