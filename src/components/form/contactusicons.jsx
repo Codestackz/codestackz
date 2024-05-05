@@ -20,7 +20,7 @@ const Contactusicons = () => {
                                 <div className="iconshadow px-3 py-3">
                                     <i className="fa-solid fa-phone fs-2 mb-3" style={{ color: "#3652AD" }}></i> <br />
                                     <p className='fw-bold fs-5 mb-2'>Phone Number</p>
-                                    <p>978 1789 405</p>
+                                    <p>+91 9781789405</p>
                                 </div>
                             </a>
                         </div>
