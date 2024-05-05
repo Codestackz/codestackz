@@ -396,8 +396,6 @@ const ContactusForm = () => {
                   </div>
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
                     <div className="inputFieldOuterDiv" >
-                      {/* <Box sx={{ minWidth: 10 }}> */}
-                      {/* <FormControl fullWidth> */}
                       <TextField
                         select
                         label="Service Type"
@@ -409,6 +407,7 @@ const ContactusForm = () => {
                           sx: {
                             "& .MuiSelect-icon": {
                               color: '#FFFFFF',
+                              marginRight:"11px"
                             },
                           },
                         //   multiple:true
@@ -444,8 +443,6 @@ const ContactusForm = () => {
                         <MenuItem value={'webConsultancy'}>Web Consultancy</MenuItem>
                         <MenuItem value={'logoDesigning'}>Logo Designing</MenuItem>
                       </TextField>
-                      {/* </FormControl> */}
-                      {/* </Box> */}
                       <br />
                     </div>
                     <div className='errField'>
@@ -564,7 +561,7 @@ const ContactusForm = () => {
           </div>
 
           <div className="col-md-4 d-none d-lg-block" data-aos="fade-right">
-            <div style={{ border: "0px solid rgba(19, 6, 34, 0.926)", backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
+            <div class="custom-form" style={{ border: "0px solid rgba(19, 6, 34, 0.926)", backgroundImage: `url(${contactusImg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", position: "relative", backgroundPosition: "center bottom", width: "100%", height: "100%" }}>
 
             </div>
           </div>

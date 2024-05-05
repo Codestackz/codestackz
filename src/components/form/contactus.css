@@ -98,6 +98,16 @@
 } */
 
   
+.custom-form::before {
+    position: absolute;
+    content: "";
+    top: 3%;
+    left: 3%;
+    height: 94%;
+    width: 94%;
+    border: 2px solid white;
+    z-index: 1;
+}
 
 .letConnectMain {
     padding: 100px 40px 70px;
@@ -115,7 +125,7 @@
 
 
 .errField {
-    height: 62px;
+    height: 40px;
     margin-top: 4px;
 }
 
