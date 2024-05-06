@@ -251,7 +251,7 @@ const ContactusForm = () => {
           </div>
 
           <div className="offset-lg-1 col-md-12 col-lg-6 mdForm">
-            <div className='' data-aos="fade-left">
+            <div className='' >
               <form action=" " id='contactusForm' >
                 <div className="row" >
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">

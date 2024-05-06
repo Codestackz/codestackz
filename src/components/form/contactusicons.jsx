@@ -16,7 +16,7 @@ const Contactusicons = () => {
                 <div className="col md-10 col-lg-9  mx-auto ">
                     <div className="row  p-5 pt-0 p-sm-5">
                         <div className='col-md-4 text-center mb-4' data-aos="fade-right">
-                            <a href="tel:9781789405">
+                            <a href="tel:+919781789405">
                                 <div className="iconshadow px-3 py-3">
                                     <i className="fa-solid fa-phone fs-2 mb-3" style={{ color: "#3652AD" }}></i> <br />
                                     <p className='fw-bold fs-5 mb-2'>Phone Number</p>
