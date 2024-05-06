@@ -76,6 +76,15 @@ const ContactusForm = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    setTimeout(() => {
+      let formEle = document.getElementById('contactusFormOuter')
+      if(window.width>=992){
+        formEle.setAttribute('data-aos','fade-left')
+      }
+      else{
+        formEle.setAttribute('data-aos','');
+      }
+    }, 200);
   })
 
 
@@ -109,7 +118,6 @@ const ContactusForm = () => {
 
   const handleSelect = (e) => {
     setSelectValue(e.target.value);
-
   }
 
   const handleSubmit = (e) => {
@@ -251,7 +259,7 @@ const ContactusForm = () => {
           </div>
 
           <div className="offset-lg-1 col-md-12 col-lg-6 mdForm">
-            <div className='' >
+            <div className='' id='contactusFormOuter' data-aos="fade-left">
               <form action=" " id='contactusForm' >
                 <div className="row" >
                   <div className="col-xs-12 col-sm-9 col-md-6 mx-auto">
