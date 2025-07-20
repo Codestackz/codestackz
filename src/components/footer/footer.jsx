@@ -104,7 +104,7 @@ const Footer = () => {
                             <Link to={'/'}  onClick={() => window.scrollTo(0, 0)}>
                                 <img src={cszlogo} style={{ width: "40px", height: "40px", marginRight: "5px" }}></img>
                             </Link>
-                            <i className="fa-regular fa-copyright" style={{ color: "#000000" }}></i> <span className='fw-bold'>2024 Codestackz</span>
+                            <i className="fa-regular fa-copyright" style={{ color: "#000000" }}></i> <span className='fw-bold'>2025 Codestackz</span>
                         </div>
                         {/* <div className="float-end" id='footberBottomSocial'>
                             <i className="fa-brands fa-instagram fs-3 fw-bold me-3" style={{ color: "#000000" }}></i>
